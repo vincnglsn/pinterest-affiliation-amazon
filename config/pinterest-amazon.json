@@ -1,47 +1,39 @@
 {
   "_note": "Gabarit reconstruit à partir de la description de la skill pinterest-affiliation-amazon. Complète les champs marqués A_DEFINIR avant la première exécution.",
-
   "tag_affiliation": "whatelsebyvin-21",
-
   "dossier_images": "images/produits",
   "journal": "data/epingles-publiees.json",
   "manifeste_images_manquantes": "images-a-telecharger.tsv",
-
   "source": {
     "fournisseur": "rainforest",
-    "_note": "Fournisseur produits par défaut. Passer à 'creators-api' (API officielle Amazon) une fois 10 ventes qualifiées sur 30 jours atteintes.",
+    "_note": "Fournisseur produits par défaut. Passer à 'creators-api' une fois 10 ventes qualifiées sur 30 jours atteintes.",
     "api_key": "${RAINFOREST_API_KEY}",
-    "_note_secret": "Ne jamais mettre la vraie clé en clair ici. Utiliser une variable d'environnement / un secret GitHub Actions et la référencer ici."
+    "_note_secret": "Ne jamais mettre la vraie clé en clair ici. Utiliser une variable d'environnement / un identifiant et la référencer ici."
   },
-
   "publication": {
     "canal": "A_DEFINIR",
-    "_note": "Choisir un canal: 'buffer' (publication immédiate via Buffer), 'pinterest-api' (API Pinterest v5, tableau + section), ou 'navigateur' (solution de repli manuelle). Le canal doit savoir viser une SECTION de tableau, pas juste le tableau.",
+    "_note": "Choisir: 'buffer', 'pinterest-api' ou 'navigateur'. Doit savoir viser une SECTION de tableau, pas juste le tableau.",
     "organisation_id_buffer": "A_DEFINIR_SI_CANAL_BUFFER",
     "pinterest_access_token": "${PINTEREST_ACCESS_TOKEN}",
     "_note_secret": "Idem, ne pas committer le vrai token."
   },
-
   "categories": [
-    { "tableau": "High-Tech",   "sous_categorie": "Téléphonie",                        "pinterest_board_id": "", "pinterest_section_id": "" },
-    { "tableau": "High-Tech",   "sous_categorie": "Montres & bracelets connectés",     "pinterest_board_id": "", "pinterest_section_id": "" },
-    { "tableau": "High-Tech",   "sous_categorie": "TV & divertissement",               "pinterest_board_id": "", "pinterest_section_id": "" },
-    { "tableau": "High-Tech",   "sous_categorie": "Audio & enceintes connectées",      "pinterest_board_id": "", "pinterest_section_id": "" },
-    { "tableau": "High-Tech",   "sous_categorie": "PC & Portables",                    "pinterest_board_id": "", "pinterest_section_id": "" },
-
-    { "tableau": "Maison",      "sous_categorie": "Arts de la table",                  "pinterest_board_id": "", "pinterest_section_id": "" },
-    { "tableau": "Maison",      "sous_categorie": "Cuisine",                           "pinterest_board_id": "", "pinterest_section_id": "" },
-    { "tableau": "Maison",      "sous_categorie": "Entretiens",                        "pinterest_board_id": "", "pinterest_section_id": "" },
-    { "tableau": "Maison",      "sous_categorie": "Bien-être",                         "pinterest_board_id": "", "pinterest_section_id": "" },
-    { "tableau": "Maison",      "sous_categorie": "Sécurités",                         "pinterest_board_id": "", "pinterest_section_id": "" },
-    { "tableau": "Maison",      "sous_categorie": "Bureau",                            "pinterest_board_id": "", "pinterest_section_id": "" },
-
-    { "tableau": "Extérieur",   "sous_categorie": "Autres",                            "pinterest_board_id": "", "pinterest_section_id": "" },
-    { "tableau": "Extérieur",   "sous_categorie": "Caméras",                           "pinterest_board_id": "", "pinterest_section_id": "" },
-    { "tableau": "Extérieur",   "sous_categorie": "Jardins",                           "pinterest_board_id": "", "pinterest_section_id": "" },
-    { "tableau": "Extérieur",   "sous_categorie": "Lumières",                          "pinterest_board_id": "", "pinterest_section_id": "" },
-
-    { "tableau": "Animalerie",  "sous_categorie": "Chat",                              "pinterest_board_id": "", "pinterest_section_id": "" },
-    { "tableau": "Animalerie",  "sous_categorie": "Chien",                             "pinterest_board_id": "", "pinterest_section_id": "" }
+    { "tableau": "High-Tech",  "sous_categorie": "Téléphonie", "pinterest_board_id": "", "pinterest_section_id": "" },
+    { "tableau": "High-Tech",  "sous_categorie": "Montres & bracelets connectés", "pinterest_board_id": "", "pinterest_section_id": "" },
+    { "tableau": "High-Tech",  "sous_categorie": "TV & divertissement", "pinterest_board_id": "", "pinterest_section_id": "" },
+    { "tableau": "High-Tech",  "sous_categorie": "Audio & enceintes connectées", "pinterest_board_id": "", "pinterest_section_id": "" },
+    { "tableau": "High-Tech",  "sous_categorie": "PC & Portables", "pinterest_board_id": "", "pinterest_section_id": "" },
+    { "tableau": "Maison",     "sous_categorie": "Arts de la table", "pinterest_board_id": "", "pinterest_section_id": "" },
+    { "tableau": "Maison",     "sous_categorie": "Cuisine", "pinterest_board_id": "", "pinterest_section_id": "" },
+    { "tableau": "Maison",     "sous_categorie": "Entretiens", "pinterest_board_id": "", "pinterest_section_id": "" },
+    { "tableau": "Maison",     "sous_categorie": "Bien-être", "pinterest_board_id": "", "pinterest_section_id": "" },
+    { "tableau": "Maison",     "sous_categorie": "Sécurités", "pinterest_board_id": "", "pinterest_section_id": "" },
+    { "tableau": "Maison",     "sous_categorie": "Bureau", "pinterest_board_id": "", "pinterest_section_id": "" },
+    { "tableau": "Extérieur",  "sous_categorie": "Autres", "pinterest_board_id": "", "pinterest_section_id": "" },
+    { "tableau": "Extérieur",  "sous_categorie": "Caméras", "pinterest_board_id": "", "pinterest_section_id": "" },
+    { "tableau": "Extérieur",  "sous_categorie": "Jardins", "pinterest_board_id": "", "pinterest_section_id": "" },
+    { "tableau": "Extérieur",  "sous_categorie": "Lumières", "pinterest_board_id": "", "pinterest_section_id": "" },
+    { "tableau": "Animalerie", "sous_categorie": "Chat", "pinterest_board_id": "", "pinterest_section_id": "" },
+    { "tableau": "Animalerie", "sous_categorie": "Chien", "pinterest_board_id": "", "pinterest_section_id": "" }
   ]
 }
